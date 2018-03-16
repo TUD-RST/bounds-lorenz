@@ -14,7 +14,7 @@ http://reduce-algebra.sourceforge.net/
 
 There are two main versions of REDUCE available, which are based on different Lips libraries:
 
-| redcsl   | Codemist Standard Lisp (CSL) |
-| redpsl   | Portable Standard Lisp (PSL) |
+redcsl   | Codemist Standard Lisp (CSL)
+redpsl   | Portable Standard Lisp (PSL)
 
 
