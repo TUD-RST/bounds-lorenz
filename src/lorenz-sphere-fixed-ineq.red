@@ -1,9 +1,9 @@
-%
-%
-%
-%
+% Automatic Generation of Bounds for Polynomial Systems with Application to the Lorenz System
+% REDUCE source file
+% Spherical bounds with fixed center
+% Formulation with differential inequality
 load_package "redlog";
-% Select context: Real field
+% Select algebraic context: Real field
 rlset r;
 % Advanced elimination method (virtual substitution)
 on ofsfvs;
@@ -24,8 +24,8 @@ dV3:=df(V,x3);
 % Derivative along systems dynamics
 dV:=f1*dV1 + f2*dV2 + f3*dV3;
 % Expression with quantifiers (prenex formula)
-phi:=all({x1,x2,x3},
-  s>0 and r>0 and s>0 and c>0 and (V>c^2 impl dV<0));
+phi:=ex(d,all({x1,x2,x3},
+  s>0 and r>0 and s>0 and c>0 and d>0 and dV<=-d*(V-c^2) ));
 % Quantifier elimination (QE)
 psi:=rlqe(phi);
 % File output
