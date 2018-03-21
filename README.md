@@ -12,7 +12,7 @@ http://reduce-algebra.sourceforge.net/
 
 There are two main versions of REDUCE available, which are based on different Lips libraries:
 
-Connand | Library version 
+Command | Library version 
 :--- | :--- 
 `redcsl`   | Codemist Standard Lisp (CSL) 
 `redpsl`   | Portable Standard Lisp (PSL) 
@@ -23,8 +23,14 @@ The [src](src) directory contains the source REDUCE files listed in the next tab
 
 File | Description
 :--- | :---
-`lorenz-sphere-fixed-impl.red` | Spherical bounds with fixed center, problem formulation with implication
-`lorenz-sphere-fixed-ineq.red` | Spherical bounds with fixed center, problem formulation with differential inequality
+`lorenz-sphere-fix-impl.red` | Spherical bounds with fixed center, problem formulation with implication
+`lorenz-sphere-fix-ineq.red` | Spherical bounds with fixed center, problem formulation with differential inequality
+`lorenz-sphere-var-gen.red` | Spherical bounds with variable center, generic paramters
+`lorenz-sphere-var-fix.red` | Spherical bounds with variable center, fixed paramters
+`lorenz-ellipse-fix.red` | Elliptical bounds with fixed coordinates and fixed center, generic parameters
+`lorenz-ellipse-var.red` | Elliptical bounds with fixed coordinates and variable center, fixed parameters
+
+The evaluation of these REDUCE source files yields large expression which are stored in the ASCII file `lorenz.out`. The expressions can be simplified with the tool SLFQ. The results of these simplications are stored in the file [Simplification.md](doc/Simplification.md) of the [doc](doc) directory.
 
 ## Licence
 
