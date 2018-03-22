@@ -1,4 +1,4 @@
-# Automatic Generation of Bounds for the Lorenz System Using Quantifier Elimination
+# Generation of Bounds for the Lorenz System Using Quantifier Elimination
 
 This project contains the REDUCE source files for the computation of bounds using quantifier elimination with application to the chaotic Lorenz system. The project allows the verification of the results presented in the follwing paper:
 
@@ -16,6 +16,14 @@ Command | Library version
 :--- | :--- 
 `redcsl`   | Codemist Standard Lisp (CSL) 
 `redpsl`   | Portable Standard Lisp (PSL) 
+
+The quantifier elimination is carried out using the package REDLOG. The program code is already part of REDUCE. The documentation can be found on the REDLOG website:
+
+http://www.redlog.eu/
+
+The quatifier elimination process often results in comparatively large expressions. These expressions can be simplified using the tool SLFQ (Simplifying Large Formulas with QEPCAD B):
+
+https://www.usna.edu/CS/qepcadweb/SLFQ/Home.html
 
 ## Contents
 

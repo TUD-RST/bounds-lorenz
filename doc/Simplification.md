@@ -1,16 +1,34 @@
+# Generation of Bounds for the Lorenz System Using Quantifier Elimination
 
+The project allows the verification of the results presented in the follwing paper:
 
-The [src](../src) directory contains the source REDUCE files. 
+Klaus Röbenack, Rick Voßwinkel, Hendrik Richter: *Automatic Generation of Bounds for Polynomial Systems with Application to the Lorenz System*. https://arxiv.org/abs/1712.08228v1
 
-The computation with REDUCE yields the ASCII file ```lorenz.out``` containing quantifier-free expressions. We carried out simplifications with the tool SLFQ:
+## Computation
+
+The [src](../src) directory contains the source REDUCE files. We used the Codemist Standard Lisp (CSL) branch of REDUCE under Linux. The program is called as follows:
+
+```
+redcsl <sourcefilename.red
+```
+
+For an additional measurement of the computation time we use the calling sequence:
+
+```
+time redcsl <sourcefilename.red
+```
+
+The computation with REDUCE yields the ASCII file ```lorenz.out``` containing quantifier-free expressions. In this file we record the results of the simplifications. We carried out simplifications with the tool SLFQ:
 
 ```
 slfq lorenz.out
 ```
 
-This tools calls the program QEPCAD-B repeatedly. 
+This tools calls the program QEPCAD B repeatedly. 
 
-## ```lorenz-sphere-fix-impl.red```
+## Simplification Results
+
+### ```lorenz-sphere-fix-impl.red```
 
 The REDUCE output file ```lorenz.out``` has a size of 4.3 KiB. Simplification with SLFQ:
 
@@ -27,7 +45,7 @@ An equivalent formula is:
 There were 130 QEPCADB calls
 ```
 
-## ```lorenz-sphere-fix-ineq.red```
+### ```lorenz-sphere-fix-ineq.red```
 
 The REDUCE output file ```lorenz.out``` has a size of 4.6 KiB. Simplification with SLFQ:
 
@@ -44,11 +62,11 @@ An equivalent formula is:
 There were 351 QEPCADB calls!
 ```
 
-## ```lorenz-sphere-var-gen.red```
+### ```lorenz-sphere-var-gen.red```
 
-The REDUCE output file ```lorenz.out``` has a size of 822 KiB.
+The REDUCE output file ```lorenz.out``` has a size of 822 KiB. We were not able to simplify this source code with SLFQ.
 
-## ```lorenz-sphere-var-fix.red```
+### ```lorenz-sphere-var-fix.red```
 
 The REDUCE output file ```lorenz.out``` has a size of 37 KiB.
 
@@ -65,7 +83,7 @@ An equivalent formula is:
 There were 559 QEPCADB calls!
 ```
 
-## ```lorenz-ellipse-fix.red```
+### ```lorenz-ellipse-fix.red```
 
 The REDUCE output file ```lorenz.out``` has a size of 3.1 KiB.
 
@@ -82,7 +100,7 @@ An equivalent formula is:
 There were 309 QEPCADB calls!
 ```
 
-## ```lorenz-ellipse-var.red```
+### ```lorenz-ellipse-var.red```
 
 The REDUCE output file ```lorenz.out``` has a size of 40 KiB.
 
