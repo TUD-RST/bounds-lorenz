@@ -2,7 +2,8 @@
 
 This project contains the REDUCE source files for the computation of bounds using quantifier elimination with application to the chaotic Lorenz system. The project allows the verification of the results presented in the follwing paper:
 
-Klaus Röbenack, Rick Voßwinkel, Hendrik Richter: *Automatic Generation of Bounds for Polynomial Systems with Application to the Lorenz System*. https://arxiv.org/abs/1712.08228
+Klaus Röbenack, Rick Voßwinkel, Hendrik Richter: *Automatic Generation of Bounds for Polynomial Systems with Application to the Lorenz System*. Chaos, Solitons and Fractals: the interdisciplinary journal of Nonlinear Science, and Nonequilibrium and Complex Phenomena 113C (2018) pp. 25-30. In print.
+Preprint: https://arxiv.org/abs/1712.08228
 
 ## Prerequisites
 
